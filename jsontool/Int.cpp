@@ -13,42 +13,35 @@ Int::Int(int val)
 
 std::string Int::ToJson()
 {
-	// TODO
-
-	return "";
+	return std::to_string(m_value);
 }
 
-const Int& operator++(Int& i) {
-	i.m_value++;
-	return i;
+Int Int::operator++()
+{
+	m_value++;
 }
 
-const Int operator++(Int& i, int) {
-	Int oldValue(i.m_value);
-	i.m_value++;
-	return oldValue;
+Int Int::operator--()
+{
+	m_value--;
 }
 
-const Int& operator--(Int& i) {
-	i.m_value--;
-	return i;
+Int Int::operator+(Int right)
+{
+	m_value = m_value + right.m_value;
 }
 
-const Int operator--(Int& i, int) {
-	Int oldValue(i.m_value);
-	i.m_value--;
-	return oldValue;
+Int Int::operator=(Int right)
+{
+	if (this == &right)
+	{
+		return *this;
+	}
+	m_value = right.m_value;
+	return *this;
 }
 
-const Int operator+(const Int& left, const Int& right) {
-	return Int(left.m_value + right.m_value);
-}
-
-Int& operator+=(Int& left, const Int& right) {
-	left.m_value += right.m_value;
-	return left;
-}
-
-bool operator==(const Int& left, const Int& right) {
-	return left.m_value == right.m_value;
+bool Int::operator==(Int right)
+{
+	return m_value == right.m_value;
 }
