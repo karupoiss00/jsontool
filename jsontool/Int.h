@@ -4,8 +4,8 @@
 class Int : public IBaseJSON
 {
 public:
-	Int();
-	Int(int val);
+	Int(std::string keyName);
+	Int(std::string keyName, int val);
 
 	std::string ToJson() override;
 
@@ -17,4 +17,5 @@ public:
 
 private:
 	int m_value;
+	std::string m_key;
 };

@@ -1,19 +1,21 @@
 #include "stdafx.h"
 #include "Int.h"
 
-Int::Int()
+Int::Int(std::string keyName)
 {
+	m_key = keyName;
 	m_value = 0;
 }
 
-Int::Int(int val)
+Int::Int(std::string keyName, int val)
 {
+	m_key = keyName;
 	m_value = val;
 }
 
 std::string Int::ToJson()
 {
-	return std::to_string(m_value);
+	return std::string("\"" + m_key + "\": " + std::to_string(m_value) + ",");
 }
 
 Int Int::operator++()
