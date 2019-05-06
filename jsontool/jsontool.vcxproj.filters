@@ -27,12 +27,18 @@
     <ClInclude Include="Int.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
+    <ClInclude Include="String.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="Int.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="String.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
   </ItemGroup>
