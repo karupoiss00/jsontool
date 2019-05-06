@@ -3,13 +3,12 @@
 
 class Int : public IBaseJSON
 {
-private:
-	int value;
+
 public:
 	Int();
 	Int(int val);
 
-	std::string IBaseJSON::ToJSON() override;
+	std::string ToJson() override;
 
 	friend const Int& operator++(Int& i);
 
@@ -31,7 +30,10 @@ public:
 		{
 			return *this;
 		}
-		value = right.value;
+		m_value = right.m_value;
 		return *this;
 	}
+
+private:
+	int m_value;
 };

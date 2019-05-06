@@ -3,51 +3,52 @@
 
 Int::Int()
 {
-	value = 0;
+	m_value = 0;
 }
 
 Int::Int(int val)
 {
-	value = val;
+	m_value = val;
+}
+
+std::string Int::ToJson()
+{
+	// TODO
+
+	return "";
 }
 
 const Int& operator++(Int& i) {
-	i.value++;
+	i.m_value++;
 	return i;
 }
 
 const Int operator++(Int& i, int) {
-	Int oldValue(i.value);
-	i.value++;
+	Int oldValue(i.m_value);
+	i.m_value++;
 	return oldValue;
 }
 
 const Int& operator--(Int& i) {
-	i.value--;
+	i.m_value--;
 	return i;
 }
 
 const Int operator--(Int& i, int) {
-	Int oldValue(i.value);
-	i.value--;
+	Int oldValue(i.m_value);
+	i.m_value--;
 	return oldValue;
 }
 
 const Int operator+(const Int& left, const Int& right) {
-	return Int(left.value + right.value);
+	return Int(left.m_value + right.m_value);
 }
 
 Int& operator+=(Int& left, const Int& right) {
-	left.value += right.value;
+	left.m_value += right.m_value;
 	return left;
 }
 
 bool operator==(const Int& left, const Int& right) {
-	return left.value == right.value;
-}
-
-std::string Int::IBaseJSON::ToJSON()
-{
-	
-	return std::to_string()
+	return left.m_value == right.m_value;
 }

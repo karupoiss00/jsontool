@@ -4,5 +4,7 @@
 class IBaseJSON
 {
 public:
-	virtual std::string ToJSON() = 0;
+	virtual ~IBaseJSON() = default;
+
+	virtual std::string ToJson() = 0;
 };
