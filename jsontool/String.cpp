@@ -17,3 +17,9 @@ std::string String::ToJson()
 {
 	return std::string("\"" + m_key + "\": \"" + m_value + "\",");
 }
+
+String String::operator=(String right)
+{
+	m_value = right.m_value;
+	return *this;
+}

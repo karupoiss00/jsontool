@@ -12,7 +12,16 @@ public:
 	Int operator++();
 	Int operator--();
 	Int operator+(Int right);
+	Int operator-(Int right);
+	Int operator*(Int right);
+	Int operator/(Int right);
+	Int operator%(Int right);
 	Int operator=(Int right);
+	Int operator+=(Int right);
+	Int operator-=(Int right);
+	Int operator*=(Int right);
+	Int operator/=(Int right);
+	Int operator%=(Int right);
 	bool operator==(Int right);
 
 private:

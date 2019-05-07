@@ -33,6 +33,26 @@ Int Int::operator+(Int right)
 	m_value = m_value + right.m_value;
 }
 
+Int Int::operator-(Int right)
+{
+	m_value = m_value - right.m_value;
+}
+
+Int Int::operator*(Int right)
+{
+	m_value = m_value * right.m_value;
+}
+
+Int Int::operator/(Int right)
+{
+	m_value = m_value / right.m_value;
+}
+
+Int Int::operator%(Int right)
+{
+	m_value = m_value % right.m_value;
+}
+
 Int Int::operator=(Int right)
 {
 	if (this == &right)
@@ -42,6 +62,32 @@ Int Int::operator=(Int right)
 	m_value = right.m_value;
 	return *this;
 }
+
+Int Int::operator+=(Int right)
+{
+	m_value += right.m_value;
+}
+
+Int Int::operator-=(Int right)
+{
+	m_value -= right.m_value;
+}
+
+Int Int::operator*=(Int right)
+{
+	m_value *= right.m_value;
+}
+
+Int Int::operator/=(Int right)
+{
+	m_value *= right.m_value;
+}
+
+Int Int::operator%=(Int right)
+{
+	m_value *= right.m_value;
+}
+
 
 bool Int::operator==(Int right)
 {
