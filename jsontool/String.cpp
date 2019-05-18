@@ -23,3 +23,8 @@ String String::operator=(String right)
 	m_value = right.m_value;
 	return *this;
 }
+
+String::operator std::string()
+{
+	return m_value;
+}

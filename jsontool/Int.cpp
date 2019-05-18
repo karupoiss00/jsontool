@@ -93,3 +93,8 @@ bool Int::operator==(Int right)
 {
 	return m_value == right.m_value;
 }
+
+Int::operator int()
+{
+	return m_value;
+}

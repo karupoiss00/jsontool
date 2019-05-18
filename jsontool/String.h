@@ -9,6 +9,8 @@ public:
 
 	std::string ToJson() override;
 	String operator=(String right);
+	operator std::string();
+
 private:
 	std::string m_value;
 	std::string m_key;

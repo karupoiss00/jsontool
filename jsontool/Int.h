@@ -15,7 +15,7 @@ public:
 	Int operator-(Int right);
 	Int operator*(Int right);
 	Int operator/(Int right);
-	Int operator%(Int right);
+	Int operator%(Int right);	
 	Int operator=(Int right);
 	Int operator+=(Int right);
 	Int operator-=(Int right);
@@ -23,6 +23,7 @@ public:
 	Int operator/=(Int right);
 	Int operator%=(Int right);
 	bool operator==(Int right);
+	operator int();
 
 private:
 	int m_value;
